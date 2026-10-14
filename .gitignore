@@ -1,0 +1,13 @@
+bin/
+obj/
+publish/
+publish-next/
+*.user
+*.suo
+*.log
+Barline-*-Setup.exe
+# Local working files: screenshots, measurements, publish output. Never committed.
+artifacts/
+# Third-party binaries: downloaded and verified by scripts/Get-Dependencies.ps1.
+Assets/PresentMon-*.exe
+installer/dependencies/

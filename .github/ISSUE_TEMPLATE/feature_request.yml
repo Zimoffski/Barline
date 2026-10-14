@@ -1,0 +1,16 @@
+name: Feature request
+description: An idea that would make Barline more useful
+labels: [enhancement]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like Barline to do?
+      description: Describe the problem first, then the solution you have in mind.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Anything else?
+      description: Screenshots, examples from other apps, your setup.

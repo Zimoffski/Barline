@@ -1,0 +1,29 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Check formatting
+        run: dotnet format Barline.csproj --verify-no-changes --verbosity minimal
+
+      - name: Build
+        run: dotnet build Barline.csproj --configuration Release
+
+      - name: Verify third-party downloads
+        shell: powershell
+        run: .\scripts\Get-Dependencies.ps1

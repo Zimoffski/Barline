@@ -1,0 +1,8 @@
+# Windows project: text files are checked out with CRLF everywhere, including CI,
+# so `dotnet format --verify-no-changes` sees the same line endings as .editorconfig.
+* text=auto eol=crlf
+
+*.png binary
+*.ico binary
+*.exe binary
+*.dll binary

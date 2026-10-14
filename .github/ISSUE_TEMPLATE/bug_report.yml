@@ -1,0 +1,43 @@
+name: Bug report
+description: Something does not work or shows a wrong value
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! For anything related to sensors (missing temperature, wrong load, FPS), please attach the report from the tray menu → **Sensor diagnostics…**. It lists your hardware sensors and contains no personal data except your hardware model names.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you expect, and what did you see instead? A screenshot of the strip helps.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. ...
+        2. ...
+  - type: input
+    id: version
+    attributes:
+      label: Barline version
+      description: Settings → Apps → Barline, or the installer file name.
+      placeholder: "3.4.0"
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: "Windows 11 24H2, display scale 125%"
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Sensor diagnostics
+      description: Paste the contents of diagnostics.txt or attach the file.
+      render: text
